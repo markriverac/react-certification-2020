@@ -1,0 +1,27 @@
+.video-title {
+  color: black;
+}
+
+.video-info {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.video-item {
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  cursor: pointer;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.video-item.item img {
+  max-width: 285px;
+  max-height: 250px;
+}
+
+.video-description {
+  max-height: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
