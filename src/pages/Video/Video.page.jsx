@@ -11,6 +11,7 @@ async function getVideoDetails(videoId) {
     params: {
       part: 'snippet',
       id: videoId,
+      type: 'video',
     },
   });
 
@@ -34,13 +35,11 @@ function VideoPage() {
   const [relatedVideos, setrelatedVideos] = useState({});
 
   useEffect(() => {
-    console.log('trying to change video detail');
     if (!videoDetail.id || videoId !== videoDetail.id) {
       getVideoDetails(videoId).then((result) => {
         setvideoDetail(result.data.items[0]);
       });
     } else {
-      console.log(videoDetail);
       getReccomendations(videoDetail.id).then((reccomendations) => {
         setrelatedVideos(reccomendations.data.items);
       });
@@ -48,7 +47,7 @@ function VideoPage() {
   }, [videoId, videoDetail]);
   return (
     <Container className="wrapper">
-      <VideoDetail videoDetail={videoDetail} />
+      {videoDetail.id && <VideoDetail videoDetail={videoDetail} />}
       <div className="list-container">
         {relatedVideos.length && <VideoList videos={relatedVideos} />}
       </div>
