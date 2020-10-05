@@ -16,13 +16,11 @@ function FavoriteButton({ video }) {
 
   const buttonAdd = (
     <Button onClick={addNewFavorite} variant="outline-info">
-      {' '}
       Add to favorite
     </Button>
   );
   const buttonRemove = (
     <Button onClick={removeFromFavorites} variant="outline-dark">
-      {' '}
       Remove from Favorites
     </Button>
   );

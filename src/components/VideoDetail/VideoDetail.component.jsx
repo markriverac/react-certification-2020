@@ -29,7 +29,6 @@ function VideoDetail() {
         <Col xs="auto">
           {userState.isAuth && (
             <FavoriteButton video={video} variant="outline-warning">
-              {' '}
               Add to favorite
             </FavoriteButton>
           )}
