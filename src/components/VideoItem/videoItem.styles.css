@@ -4,6 +4,13 @@
 
 .video-info {
   color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  display: -webkit-box;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
 }
 
 .video-item {
@@ -18,10 +25,4 @@
 .video-item.item img {
   max-width: 285px;
   max-height: 250px;
-}
-
-.video-description {
-  max-height: 170px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
