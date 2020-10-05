@@ -12,7 +12,6 @@ const VideoItem = ({ video }) => {
     videoContext.setCurrentVideo(video);
   }
 
-  console.log(video.id);
   return (
     <Link to={`/video/${video.id.videoId}`}>
       <div onClick={onSelectVideo} className="video-item item" aria-hidden="true">
