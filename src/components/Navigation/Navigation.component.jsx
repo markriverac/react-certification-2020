@@ -6,14 +6,12 @@ import { Link } from 'react-router-dom';
 import UserContext from '../../providers/UserProvider/User.context';
 
 function Navigation() {
-  const userContext = useContext(UserContext);
   const [username, setusername] = useState('');
   const { userState, logIn } = useContext(UserContext);
 
   function authenticate(event) {
     event.preventDefault();
     logIn(username);
-    console.log(userContext);
   }
 
   function onUsernameChange(event) {

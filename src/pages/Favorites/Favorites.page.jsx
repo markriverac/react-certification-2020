@@ -5,7 +5,6 @@ import VideoList from '../../components/VideoList';
 function FavoritesPage() {
   const { userState } = useContext(UserContext);
   const videos = userState.favorites;
-  console.log(userState);
   return <VideoList videos={videos} />;
 }
 
