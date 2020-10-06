@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React, { useState } from 'react';
 import UserContext from './User.context';
 import { userData } from './User.data';

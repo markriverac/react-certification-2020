@@ -1,20 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './videoItem.styles.css';
 import Media from 'react-bootstrap/Media';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import VideoContext from '../../providers/VideoProvider/Video.context';
 
 const VideoItem = ({ video }) => {
-  const videoContext = useContext(VideoContext);
-
-  function onSelectVideo() {
-    videoContext.setCurrentVideo(video);
-  }
-
   return (
     <Link to={`/video/${video.id.videoId}`}>
-      <div onClick={onSelectVideo} className="video-item item" aria-hidden="true">
+      <div className="video-item item" aria-hidden="true">
         <Card body style={{ width: '100%' }}>
           <Media as="li">
             <img
