@@ -3,7 +3,8 @@ import VideoItem from '../VideoItem';
 
 const VideoList = ({ videos }) => {
   const renderedVideos = videos.map((video) => {
-    return <VideoItem key={video.id.videoId} video={video} />;
+    const id = video.id.videoId || video.id;
+    return <VideoItem key={id} video={video} />;
   });
 
   return <ul className="list-unstyled">{renderedVideos}</ul>;
