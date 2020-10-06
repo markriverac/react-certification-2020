@@ -6,10 +6,11 @@ import useVideoStatus from '../../utils/hooks/useVideoStatus';
 function FavoriteButton({ video }) {
   const { addFavorite, removeFavorite } = useContext(UserContext);
   const videoStatus = useVideoStatus(video);
+  /* istanbul ignore next */
   function addNewFavorite() {
     addFavorite(video);
   }
-
+  /* istanbul ignore next */
   function removeFromFavorites() {
     removeFavorite(video);
   }

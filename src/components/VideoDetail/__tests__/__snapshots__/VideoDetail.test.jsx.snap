@@ -37,3 +37,5 @@ exports[`Renders without exploding 1`] = `
   </p>
 </div>
 `;
+
+exports[`Renders without exploding when no videodetailid 1`] = `null`;

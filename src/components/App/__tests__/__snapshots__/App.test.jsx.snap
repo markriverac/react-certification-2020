@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without exploding 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+  >
+    <button
+      aria-controls="basic-navbar-nav"
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <a
+      className="navbar-brand"
+      href="#home"
+    >
+      Find Your video
+    </a>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+      id="basic-navbar-nav"
+    >
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="nav-link"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </div>
+    </div>
+    <form
+      className="form-inline"
+      onSubmit={[Function]}
+    >
+      <input
+        aria-label="Search"
+        className="form-control mr-sm-2 login-input"
+        onChange={[Function]}
+        placeholder="username"
+        type="search"
+        value=""
+      />
+      <button
+        className="btn btn-outline-secondary my-2 my-sm-0"
+        type="submit"
+      >
+        LogIn
+      </button>
+    </form>
+  </nav>,
+  <div
+    className="page-container"
+  >
+    <main
+      className="container"
+    >
+      <section
+        className="homepage"
+      >
+        <div
+          className="ui container"
+        >
+          <div>
+            <form
+              className="ui form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="field"
+              >
+                <input
+                  className="main-search"
+                  htmlFor="searchBar"
+                  name="video-search"
+                  onChange={[Function]}
+                  placeholder="Tell me what you need"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </form>
+          </div>
+          <div>
+            <ul
+              className="list-unstyled"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>,
+]
+`;

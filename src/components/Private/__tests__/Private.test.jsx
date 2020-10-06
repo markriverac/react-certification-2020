@@ -1,16 +1,20 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Enzyme from 'enzyme';
-import { BrowserRouter } from 'react-router-dom';
 import Adapter from 'enzyme-adapter-react-16';
-import VideoPage from '../Video.page';
+import { BrowserRouter } from 'react-router-dom';
+import Private from '../Private.component';
+import UserContext from '../../../providers/UserProvider/User.context';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 it('Renders without exploding', () => {
+  const userState = { isAuth: false };
   const notFound = renderer.create(
     <BrowserRouter>
-      <VideoPage />
+      <UserContext.Provider value={{ userState }}>
+        <Private />
+      </UserContext.Provider>
     </BrowserRouter>
   );
   const tree = notFound.toJSON();

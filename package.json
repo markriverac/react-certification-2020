@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "jest": {
-    "verbose": true,
     "collectCoverageFrom": [
       "src/components/**/*.jsx",
       "src/pages/**/*.jsx",
@@ -35,8 +34,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "react-scripts test ",
+    "test:coverage": "npm run test -- --coverage --collectCoverageFrom='src/**/*.jsx' --watchAll=false --coverageThreshold='{\"global\":{\"statements\":70}}'",
     "eject": "react-scripts eject",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint ./src --ext .js,.jsx --fix"
@@ -45,7 +44,6 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
-    "babel-jest": "^26.5.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "eslint-config-airbnb": "^18.2.0",

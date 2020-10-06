@@ -11,6 +11,7 @@ exports[`Renders button without exploding 1`] = `
     >
       <input
         className="main-search"
+        htmlFor="searchBar"
         name="video-search"
         onChange={[Function]}
         placeholder="Tell me what you need"

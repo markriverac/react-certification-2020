@@ -46,3 +46,15 @@ it('does not render favorite button when not logged in', () => {
   const tree = videoDetailComponent.toJSON();
   expect(tree.children[1].children[1].children).toEqual(null);
 });
+
+it('Renders without exploding when no videodetailid', () => {
+  const videoNull = videoDetail;
+  videoNull.id = null;
+  const videoDetailComponent = renderer.create(
+    <UserProvider>
+      <VideoDetail videoDetail={videoNull} />
+    </UserProvider>
+  );
+  const tree = videoDetailComponent.toJSON();
+  expect(tree).toMatchSnapshot();
+});
