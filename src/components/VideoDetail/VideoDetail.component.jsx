@@ -4,19 +4,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FavoriteButton from '../FavoriteButton';
 import UserContext from '../../providers/UserProvider/User.context';
-import VideoContext from '../../providers/VideoProvider/Video.context';
 
-function VideoDetail() {
+function VideoDetail({ videoDetail }) {
   const { userState } = useContext(UserContext);
-  const { videoState } = useContext(VideoContext);
 
-  if (!videoState.selectedVideo.id) {
-    return <></>;
+  if (!videoDetail.id) {
+    return null;
   }
-
-  const video = videoState.selectedVideo;
-
-  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+  const videoSrc = `https://www.youtube.com/embed/${videoDetail.id}`;
   return (
     <div className="video-container">
       <div className="frame-container">
@@ -24,18 +19,17 @@ function VideoDetail() {
       </div>
       <Row className="header">
         <Col>
-          <h4> {video.snippet.title}</h4>
+          <h4> {videoDetail.snippet.localized.title}</h4>
         </Col>
         <Col xs="auto">
           {userState.isAuth && (
-            <FavoriteButton video={video} variant="outline-warning">
-              {' '}
+            <FavoriteButton video={videoDetail} variant="outline-warning">
               Add to favorite
             </FavoriteButton>
           )}
         </Col>
       </Row>
-      <p> {video.snippet.description}</p>
+      <p className="video-description"> {videoDetail.snippet.description}</p>
     </div>
   );
 }

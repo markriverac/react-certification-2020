@@ -6,3 +6,12 @@
   width: 60vw;
   height: 60vh;
 }
+
+.video-description {
+  display: -webkit-box;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}

@@ -1,4 +1,6 @@
+/* istanbul ignore file */
 import React, { useState } from 'react';
+import _ from 'lodash';
 import UserContext from './User.context';
 import { userData } from './User.data';
 
@@ -17,12 +19,10 @@ function UserProvider({ children }) {
     setuserState({ ...userState, favorites: newFavorites });
   }
   function removeFavorite(video) {
-    const favoriteVideos = userState.favorites;
-    const videoIndex = favoriteVideos.indexOf(video);
-    if (videoIndex > -1) {
-      favoriteVideos.splice(videoIndex, 1);
-      setuserState({ ...userState, favorites: favoriteVideos });
-    }
+    const favoriteVideos = _.filter(userState.favorites, (fav) => {
+      return fav.id !== video.id;
+    });
+    setuserState({ ...userState, favorites: favoriteVideos });
   }
 
   return (

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders button without exploding 1`] = `
+<div>
+  <form
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="field"
+    >
+      <input
+        className="main-search"
+        htmlFor="searchBar"
+        name="video-search"
+        onChange={[Function]}
+        placeholder="Tell me what you need"
+        type="text"
+        value=""
+      />
+    </div>
+  </form>
+</div>
+`;

@@ -1,23 +1,22 @@
+/* istanbul ignore file */
 import React, { useState } from 'react';
 import VideoContext from './Video.context';
-import { videoData } from './Video.data';
 
 function VideoProvider({ children }) {
-  const [videoState, setvideoState] = useState(videoData);
-
-  function setCurrentVideo(actualVideo) {
-    setvideoState({ ...videoState, selectedVideo: actualVideo });
-  }
-  function setCurrentList(list) {
-    setvideoState({ ...videoState, videoList: list });
-  }
-  function setSearchingVideo(query) {
-    setvideoState({ ...videoState, searchingVideo: query });
-  }
+  const [videoList, setVideoList] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState({});
+  const [searchingVideo, setSearchingVideo] = useState('');
 
   return (
     <VideoContext.Provider
-      value={{ videoState, setCurrentVideo, setSearchingVideo, setCurrentList }}
+      value={{
+        videoList,
+        selectedVideo,
+        searchingVideo,
+        setCurrentVideo: setSelectedVideo,
+        setSearchingVideo,
+        setCurrentList: setVideoList,
+      }}
     >
       {children}
     </VideoContext.Provider>

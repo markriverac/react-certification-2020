@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders button without exploding 1`] = `
+<div
+  className="page-container"
+>
+  <main
+    className="container"
+  >
+    children
+  </main>
+</div>
+`;

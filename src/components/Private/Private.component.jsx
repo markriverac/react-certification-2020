@@ -7,7 +7,7 @@ function Private({ children, ...rest }) {
   return (
     <Route
       {...rest}
-      render={() => (user.userState.isAuth ? children : <Redirect to="/" />)}
+      render={() => (user.userState.isAuth ? children : <Redirect to="/404" />)}
     />
   );
 }
