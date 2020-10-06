@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without exploding 1`] = `
+<div
+  className="video-container"
+>
+  <div
+    className="frame-container"
+  >
+    <iframe
+      allowFullScreen={true}
+      className="video"
+      src="https://www.youtube.com/embed/id"
+      title="Video player"
+    />
+  </div>
+  <div
+    className="header row"
+  >
+    <div
+      className="col"
+    >
+      <h4>
+         
+        title
+      </h4>
+    </div>
+    <div
+      className="col-auto"
+    />
+  </div>
+  <p
+    className="video-description"
+  >
+     
+    description
+  </p>
+</div>
+`;

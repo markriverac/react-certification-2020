@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without exploding 1`] = `
+<a
+  href="/video/id"
+  onClick={[Function]}
+>
+  <div
+    aria-hidden="true"
+    className="video-item item"
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="card-body"
+      >
+        <li
+          className="media"
+        >
+          <img
+            alt="description"
+            className="mr-3"
+            height={180}
+            src="url"
+            width={350}
+          />
+          <div
+            className="media-body"
+          >
+            <div
+              className="video-description"
+            >
+              <h5
+                className="video-title"
+              >
+                title
+              </h5>
+              <p
+                className="video-info"
+              >
+                description
+              </p>
+            </div>
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+</a>
+`;
