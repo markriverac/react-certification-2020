@@ -2,6 +2,22 @@
   "name": "react-certification-2020",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/components/**/*.jsx",
+      "src/pages/**/*.jsx",
+      "src/providers/**/*.jsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^10.4.9",
@@ -15,16 +31,6 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": -10
-      }
-    }
   },
   "scripts": {
     "start": "react-scripts start",
